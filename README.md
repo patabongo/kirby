@@ -6,6 +6,8 @@ Kirby bibliographical data from http://www.marvelmasterworks.com/resources/kirby
 
 # Loading in R
 
+This assumes you've already installed the appropriate version of R for your operating system. If not: http://www.r-project.org/
+
     install.packages("devtools")
     library(devtools)
     devtools::install_github("patabongo/kirby")
@@ -14,7 +16,7 @@ Kirby bibliographical data from http://www.marvelmasterworks.com/resources/kirby
 # Procedure
 
     x <- kirby.scrape()
-Scrapes the bibliography web pages and stores in x.
+Scrapes the bibliography web pages and stores in x. You'll probably see a couple of error messages, but it's okay to ignore these.
 
     y <- kirby.breakdown(x)
 Breaks down the data by time period.
@@ -39,3 +41,5 @@ Finally, the data can be converted from wide to long format using:
 Now you have your own version of the bibliography in long format to play around with as you see fit. To export in spreadsheet-friendly format (I use comma separated values this time):
 
       write.csv(kirbylong, "kirbylong.csv", row.names=F)
+
+As ever, if you want to get a more in-depth idea of how all this was done, you can browse through the source files.
