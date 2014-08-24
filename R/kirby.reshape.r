@@ -13,5 +13,6 @@ y <- reshape(x,
 	idvar="monthyear", 
 	varying=2:ncol(x))
 y <- y[!is.na(y$pages),]
+y <- y[c(1,3:7)]
 return(y)
 }
