@@ -8,6 +8,8 @@ Kirby bibliographical data from http://www.marvelmasterworks.com/resources/kirby
 
 This assumes you've already installed the appropriate version of R for your operating system. If not: http://www.r-project.org/
 
+Then at the console, enter:
+
     install.packages("devtools")
     library(devtools)
     devtools::install_github("patabongo/kirby")
